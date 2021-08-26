@@ -9,14 +9,17 @@ namespace CadastroJogos.Models
 {
     public class Cliente
     {
+        [Display(Name = "Nome do Cliente")]
         [Required(ErrorMessage = "Nome obrigatório")]
         public string Nome_Cli { get; set; }
 
+        [Display(Name = "CPF do cliente")]
         [RegularExpression(@"^\d{3}\.\d{3}\.\d{3}-\d{2}$", ErrorMessage = "Insira um CPF válido")]
         [Required(ErrorMessage = "CPF obrigatório")]
         [Remote("Cpf_Cli_Uni", "cliente", ErrorMessage = "CPF já cadastrado")]
         public string Cpf_Cli { get; set; }
 
+        [Display(Name = "Data de nascimento")]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         [Required(ErrorMessage = "Data de Nascimento Obrigatória")]
         public DateTime DtNasc_Cli
@@ -35,14 +38,17 @@ namespace CadastroJogos.Models
         }
         private DateTime? dtNasc_Cli = null;
 
+        [Display(Name = "E-mail do cliente")]
         [RegularExpression(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", ErrorMessage = "Insira um Email Válido")]
         public string Email_Cli { get; set; }
 
-        [Required(ErrorMessage = "Tel5efone obrigatório")]
+        [Display(Name = "Celular do cliente")]
+        [Required(ErrorMessage = "Telefone obrigatório")]
         [RegularExpression(@"^\([1 - 9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0 - 9]{ 4}$)", ErrorMessage = "Celular válido:(xx)9xxxx-xxxx")]
         public string Cell_Cli { get; set; }
 
-        [Required(ErrorMessage = "Celular obrigatório")]
+        [Display(Name = "Endereço do cliente")]
+        [Required(ErrorMessage = "Endereço obrigatório")]
         [StringLength(100, MinimumLength = 5, ErrorMessage = "Mínimo de 5 caracteres e máximo de 100")]
         public string Ende_Cli { get; set; }
     }
