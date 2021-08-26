@@ -1,0 +1,59 @@
+﻿@model CadastroJogos.Models.Cliente
+@{
+    ViewBag.Title = "Index";
+}
+<h3> Cadastrar Funcionario </h3>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fildset>
+        <lengend> Cadastro de Funcionários </lengend>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Nome_Cli)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Nome_Cli)
+            @Html.ValidationMessageFor(m => m.Nome_Cli)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Cpf_Cli)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Cpf_Cli)
+            @Html.ValidationMessageFor(m => m.Cpf_Cli)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.DtNasc_Cli)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.DtNasc_Cli)
+            @Html.ValidationMessageFor(m => m.DtNasc_Cli)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Email_Cli)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Email_Cli)
+            @Html.ValidationMessageFor(m => m.Email_Cli)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Cell_Cli)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Cell_Cli)
+            @Html.ValidationMessageFor(m => m.Cell_Cli)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Ende_Cli)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Ende_Cli)
+            @Html.ValidationMessageFor(m => m.Ende_Cli)
+        </div>
+
+        <div>
+            <br /> <input type="submit" value="Enviar" />
+        </div>
+    </fildset>
+}

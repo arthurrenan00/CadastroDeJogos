@@ -1,0 +1,31 @@
+﻿@model CadastroJogos.Models.Cliente
+@{
+    ViewBag.Title = "ListCli";
+}
+<h3> Listar </h3>
+
+<fildset>
+    <lengend> Lista de Funcionários </lengend>
+
+    <div class="editor-label">@Html.DisplayNameFor(m => m.Nome_Cli)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.Nome_Cli)</div>
+
+    <div class="editor-label">@Html.DisplayNameFor(m => m.Cpf_Cli)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.Cpf_Cli)</div>
+
+    <div class="editor-label">@Html.DisplayNameFor(m => m.DtNasc_Cli)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.DtNasc_Cli)</div>
+
+    <div class="editor-label">@Html.DisplayNameFor(m => m.Email_Cli)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.Email_Cli)</div>
+
+    <div class="editor-label">@Html.DisplayNameFor(m => m.Cell_Cli)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.Cell_Cli)</div>
+
+    <div class="editor-label">@Html.DisplayNameFor(m => m.Ende_Cli)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.Ende_Cli)</div>
+
+    <br />
+    @Html.ActionLink("Voltar", "Index", "Home")
+</fildset>
+ }

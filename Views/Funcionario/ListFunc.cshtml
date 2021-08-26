@@ -1,0 +1,39 @@
+﻿@model CadastroJogos.Models.Funcionario
+@{
+    ViewBag.Title = "ListFunc";
+}
+<h3> Listar </h3>
+
+<fildset>
+    <lengend> Lista de Funcionários </lengend>
+
+    <div class="editor-label">@Html.DisplayNameFor(m => m.Cod_Func)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.Cod_Func)</div>
+
+    <div class="editor-label">@Html.DisplayNameFor(m => m.Nome_Func)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.Nome_Func)</div>
+
+    <div class="editor-label">@Html.DisplayNameFor(m => m.Cpf_Func)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.Cpf_Func)</div>
+
+    <div class="editor-label">@Html.DisplayNameFor(m => m.Rg_Func)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.Rg_Func)</div>
+
+    <div class="editor-label">@Html.DisplayNameFor(m => m.DtNasc_Func)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.DtNasc_Func)</div>
+
+    <div class="editor-label">@Html.DisplayNameFor(m => m.Ende_Func)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.Ende_Func)</div>
+
+    <div class="editor-label">@Html.DisplayNameFor(m => m.Cell_Func)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.Cell_Func)</div>
+
+    <div class="editor-label">@Html.DisplayNameFor(m => m.Email_Func)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.Email_Func)</div>
+
+    <div class="editor-label">@Html.DisplayNameFor(m => m.Cargo)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.Cargo)</div>
+    <br />
+    @Html.ActionLink("Voltar", "Index", "Home")
+</fildset>
+ }
