@@ -55,7 +55,6 @@ namespace CadastroJogos.Models
 
         [Display(Name = "Celular do funcionário")]
         [Required(ErrorMessage = "Celular do funcionário obrigatório")]
-        [RegularExpression(@"^\([1 - 9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0 - 9]{ 4}$)", ErrorMessage = "Celular válido:(xx)9xxxx-xxxx")]
         public string Cell_Func { get; set; }
 
         [Display(Name = "E-mail do funcionário")]

@@ -44,7 +44,6 @@ namespace CadastroJogos.Models
 
         [Display(Name = "Celular do cliente")]
         [Required(ErrorMessage = "Telefone obrigatório")]
-        [RegularExpression(@"^\([1 - 9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0 - 9]{ 4}$)", ErrorMessage = "Celular válido:(xx)9xxxx-xxxx")]
         public string Cell_Cli { get; set; }
 
         [Display(Name = "Endereço do cliente")]
