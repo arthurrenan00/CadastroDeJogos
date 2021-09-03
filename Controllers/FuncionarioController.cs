@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Collections.ObjectModel;
 using CadastroJogos.Models;
+using CadastroJogos.Repositorio;
 
 namespace CadastroJogos.Controllers
 {
@@ -16,15 +17,13 @@ namespace CadastroJogos.Controllers
             var func = new Funcionario();
             return View(func);
         }
+        Acoes ac = new Acoes();
 
         [HttpPost]
         public ActionResult Index(Funcionario func)
         {
 
-            if (ModelState.IsValid)
-            {
-                return View("ListFunc", func);
-            }
+            ac.CadastrarFunc(func);
             return View(func);
         }
 
@@ -37,8 +36,8 @@ namespace CadastroJogos.Controllers
         {
             var bdfunc = new Collection<string>
             {
-                "12345678",
-                "23456789"
+                "kian",
+                "calamidade"
             };
             return Json(bdfunc.All(x => x.ToLower() != codfuncio.ToLower()), JsonRequestBehavior.AllowGet);
         }

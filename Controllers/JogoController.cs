@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using CadastroJogos.Models;
 using System.Collections.ObjectModel;
+using CadastroJogos.Repositorio;
 
 namespace CadastroJogos.Controllers
 {
@@ -16,14 +17,12 @@ namespace CadastroJogos.Controllers
             var jogo = new Jogo();
             return View(jogo);
         }
+        Acoes ac = new Acoes();
 
         [HttpPost]
         public ActionResult Index(Jogo jogo)
         {
-            if (ModelState.IsValid)
-            {
-                return View("ListJogo", jogo);
-            }
+            ac.CadastrarJogo(jogo);
             return View(jogo);
         }
 
