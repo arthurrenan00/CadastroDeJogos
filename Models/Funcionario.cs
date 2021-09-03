@@ -12,7 +12,6 @@ namespace CadastroJogos.Models
         [Display(Name = "Código do Funcionário")]
         [Remote("Cod_Func_Uni", "funcionario", ErrorMessage = "Funcionário já cadastrado")]
         [Required(ErrorMessage = "Código de funcionário obrigatório")]
-        [RegularExpression(@"^[0-9]{8}", ErrorMessage = "Somente números. É necessário possuir 8 caracteres")]
         public int Cod_Func { get; set; }
 
         [Display(Name = "Nome do Funcionário")]
